@@ -1,0 +1,945 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="LearnLoop responsive online course catalog"
+    >
+
+    <title>LearnLoop | Course Catalog</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <a href="#" class="logo">
+                Learn<span>Loop</span>
+            </a>
+
+
+            <nav class="main-nav" aria-label="Main navigation">
+
+                <a href="#courses">Courses</a>
+
+                <a href="#categories">Categories</a>
+
+                <a href="#about">About</a>
+
+            </nav>
+
+
+            <a href="#courses" class="header-button">
+                Explore Courses
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+
+        <!-- HERO SECTION -->
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <p class="eyebrow">
+                        LEARN. GROW. LOOP.
+                    </p>
+
+
+                    <h1>
+                        Build skills that
+                        <span>move you forward.</span>
+                    </h1>
+
+
+                    <p class="hero-description">
+                        Explore practical courses designed to help you
+                        learn new skills, grow your career, and stay ahead.
+                    </p>
+
+                </div>
+
+
+                <div class="hero-stat">
+
+                    <strong>9+</strong>
+
+                    <span>
+                        Featured courses
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             COURSE CATALOG
+        ========================== -->
+
+        <section
+            class="catalog-section"
+            id="courses"
+        >
+
+            <div class="container">
+
+
+                <!-- SECTION HEADING -->
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            OUR CATALOG
+                        </p>
+
+                        <h2>
+                            Popular courses
+                        </h2>
+
+                    </div>
+
+
+                    <p class="course-count">
+                        9 courses available
+                    </p>
+
+                </div>
+
+
+
+                <!-- =========================
+                     FILTER BAR
+                ========================== -->
+
+                <div
+                    class="filter-bar"
+                    aria-label="Course filters"
+                >
+
+
+                    <!-- CATEGORY -->
+
+                    <div class="filter-group">
+
+                        <label for="category">
+                            Category
+                        </label>
+
+                        <select
+                            id="category"
+                            name="category"
+                        >
+
+                            <option>
+                                All Categories
+                            </option>
+
+                            <option>
+                                Design
+                            </option>
+
+                            <option>
+                                Development
+                            </option>
+
+                            <option>
+                                Marketing
+                            </option>
+
+                            <option>
+                                Business
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- LEVEL -->
+
+                    <div class="filter-group">
+
+                        <label for="level">
+                            Level
+                        </label>
+
+                        <select
+                            id="level"
+                            name="level"
+                        >
+
+                            <option>
+                                All Levels
+                            </option>
+
+                            <option>
+                                Beginner
+                            </option>
+
+                            <option>
+                                Intermediate
+                            </option>
+
+                            <option>
+                                Advanced
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- FORMAT -->
+
+                    <div class="filter-group">
+
+                        <label for="format">
+                            Format
+                        </label>
+
+                        <select
+                            id="format"
+                            name="format"
+                        >
+
+                            <option>
+                                All Formats
+                            </option>
+
+                            <option>
+                                Video
+                            </option>
+
+                            <option>
+                                Project Based
+                            </option>
+
+                            <option>
+                                Workshop
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- SORT -->
+
+                    <div class="filter-group sort-control">
+
+                        <label for="sort">
+                            Sort by
+                        </label>
+
+                        <select
+                            id="sort"
+                            name="sort"
+                        >
+
+                            <option>
+                                Most Popular
+                            </option>
+
+                            <option>
+                                Highest Rated
+                            </option>
+
+                            <option>
+                                Price: Low to High
+                            </option>
+
+                            <option>
+                                Price: High to Low
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     COURSE GRID
+                ========================== -->
+
+                <div class="course-grid">
+
+
+                    <!-- COURSE 1 -->
+
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80"
+                                srcset="
+                                    https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&q=80 400w,
+                                    https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80 800w,
+                                    https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&q=80 1200w
+                                "
+                                sizes="
+                                    (max-width: 599px) 92vw,
+                                    (max-width: 1023px) 45vw,
+                                    30vw
+                                "
+                                alt="Laptop displaying web development code"
+                            >
+
+                            <span class="course-category">
+                                Development
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-content">
+
+                            <div class="rating">
+                                <span>★</span>
+                                <strong>4.9</strong>
+                                <small>(324)</small>
+                            </div>
+
+
+                            <h3>
+                                Modern Web Development
+                            </h3>
+
+
+                            <p class="instructor">
+                                Alex Morgan
+                            </p>
+
+
+                            <div class="course-footer">
+
+                                <span class="price">
+                                    $49
+                                </span>
+
+                                <span class="level">
+                                    Beginner
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- COURSE 2 -->
+
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80"
+                                srcset="
+                                    https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=400&q=80 400w,
+                                    https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80 800w,
+                                    https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80 1200w
+                                "
+                                sizes="
+                                    (max-width: 599px) 92vw,
+                                    (max-width: 1023px) 45vw,
+                                    30vw
+                                "
+                                alt="Designer working with colorful interface designs"
+                            >
+
+                            <span class="course-category">
+                                Design
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-content">
+
+                            <div class="rating">
+                                <span>★</span>
+                                <strong>4.8</strong>
+                                <small>(281)</small>
+                            </div>
+
+
+                            <h3>
+                                UI/UX Design Essentials
+                            </h3>
+
+
+                            <p class="instructor">
+                                Sarah Mitchell
+                            </p>
+
+
+                            <div class="course-footer">
+
+                                <span class="price">
+                                    $39
+                                </span>
+
+                                <span class="level">
+                                    Beginner
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- COURSE 3 -->
+
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                                srcset="
+                                    https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80 400w,
+                                    https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80 800w,
+                                    https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80 1200w
+                                "
+                                sizes="
+                                    (max-width: 599px) 92vw,
+                                    (max-width: 1023px) 45vw,
+                                    30vw
+                                "
+                                alt="Business team discussing marketing strategy"
+                            >
+
+                            <span class="course-category">
+                                Business
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-content">
+
+                            <div class="rating">
+                                <span>★</span>
+                                <strong>4.7</strong>
+                                <small>(198)</small>
+                            </div>
+
+
+                            <h3>
+                                Digital Marketing Strategy
+                            </h3>
+
+
+                            <p class="instructor">
+                                Daniel Carter
+                            </p>
+
+
+                            <div class="course-footer">
+
+                                <span class="price">
+                                    $45
+                                </span>
+
+                                <span class="level">
+                                    Intermediate
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- COURSE 4 -->
+
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                                srcset="
+                                    https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=400&q=80 400w,
+                                    https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80 800w,
+                                    https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80 1200w
+                                "
+                                sizes="
+                                    (max-width: 599px) 92vw,
+                                    (max-width: 1023px) 45vw,
+                                    30vw
+                                "
+                                alt="Person learning programming on a laptop"
+                            >
+
+                            <span class="course-category">
+                                Development
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-content">
+
+                            <div class="rating">
+                                <span>★</span>
+                                <strong>4.9</strong>
+                                <small>(412)</small>
+                            </div>
+
+
+                            <h3>
+                                Python for Beginners
+                            </h3>
+
+
+                            <p class="instructor">
+                                Emma Wilson
+                            </p>
+
+
+                            <div class="course-footer">
+
+                                <span class="price">
+                                    $35
+                                </span>
+
+                                <span class="level">
+                                    Beginner
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- COURSE 5 -->
+
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80"
+                                srcset="
+                                    https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=400&q=80 400w,
+                                    https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80 800w,
+                                    https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80 1200w
+                                "
+                                sizes="
+                                    (max-width: 599px) 92vw,
+                                    (max-width: 1023px) 45vw,
+                                    30vw
+                                "
+                                alt="Creative digital design workspace"
+                            >
+
+                            <span class="course-category">
+                                Design
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-content">
+
+                            <div class="rating">
+                                <span>★</span>
+                                <strong>4.8</strong>
+                                <small>(167)</small>
+                            </div>
+
+
+                            <h3>
+                                Graphic Design Masterclass
+                            </h3>
+
+
+                            <p class="instructor">
+                                Olivia Bennett
+                            </p>
+
+
+                            <div class="course-footer">
+
+                                <span class="price">
+                                    $59
+                                </span>
+
+                                <span class="level">
+                                    Intermediate
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- COURSE 6 -->
+
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+                                srcset="
+                                    https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=400&q=80 400w,
+                                    https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80 800w,
+                                    https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80 1200w
+                                "
+                                sizes="
+                                    (max-width: 599px) 92vw,
+                                    (max-width: 1023px) 45vw,
+                                    30vw
+                                "
+                                alt="Team collaborating during a business meeting"
+                            >
+
+                            <span class="course-category">
+                                Business
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-content">
+
+                            <div class="rating">
+                                <span>★</span>
+                                <strong>4.6</strong>
+                                <small>(143)</small>
+                            </div>
+
+
+                            <h3>
+                                Leadership &amp; Team Management
+                            </h3>
+
+
+                            <p class="instructor">
+                                James Anderson
+                            </p>
+
+
+                            <div class="course-footer">
+
+                                <span class="price">
+                                    $42
+                                </span>
+
+                                <span class="level">
+                                    Advanced
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- COURSE 7 -->
+
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                                srcset="
+                                    https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80 400w,
+                                    https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80 800w,
+                                    https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80 1200w
+                                "
+                                sizes="
+                                    (max-width: 599px) 92vw,
+                                    (max-width: 1023px) 45vw,
+                                    30vw
+                                "
+                                alt="Computer code editor showing software development"
+                            >
+
+                            <span class="course-category">
+                                Development
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-content">
+
+                            <div class="rating">
+                                <span>★</span>
+                                <strong>5.0</strong>
+                                <small>(96)</small>
+                            </div>
+
+
+                            <h3>
+                                JavaScript from Zero to Pro
+                            </h3>
+
+
+                            <p class="instructor">
+                                Noah Thompson
+                            </p>
+
+
+                            <div class="course-footer">
+
+                                <span class="price">
+                                    $65
+                                </span>
+
+                                <span class="level">
+                                    Advanced
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- COURSE 8 -->
+
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80"
+                                srcset="
+                                    https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=400&q=80 400w,
+                                    https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80 800w,
+                                    https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80 1200w
+                                "
+                                sizes="
+                                    (max-width: 599px) 92vw,
+                                    (max-width: 1023px) 45vw,
+                                    30vw
+                                "
+                                alt="Marketing professional planning campaign strategy"
+                            >
+
+                            <span class="course-category">
+                                Marketing
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-content">
+
+                            <div class="rating">
+                                <span>★</span>
+                                <strong>4.7</strong>
+                                <small>(214)</small>
+                            </div>
+
+
+                            <h3>
+                                Social Media Marketing
+                            </h3>
+
+
+                            <p class="instructor">
+                                Mia Rodriguez
+                            </p>
+
+
+                            <div class="course-footer">
+
+                                <span class="price">
+                                    $32
+                                </span>
+
+                                <span class="level">
+                                    Beginner
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- COURSE 9 -->
+
+                    <article class="course-card">
+
+                        <div class="course-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+                                srcset="
+                                    https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80 400w,
+                                    https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80 800w,
+                                    https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80 1200w
+                                "
+                                sizes="
+                                    (max-width: 599px) 92vw,
+                                    (max-width: 1023px) 45vw,
+                                    30vw
+                                "
+                                alt="Students collaborating in a learning environment"
+                            >
+
+                            <span class="course-category">
+                                Business
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-content">
+
+                            <div class="rating">
+                                <span>★</span>
+                                <strong>4.9</strong>
+                                <small>(257)</small>
+                            </div>
+
+
+                            <h3>
+                                Productivity &amp; Time Management
+                            </h3>
+
+
+                            <p class="instructor">
+                                Ethan Brooks
+                            </p>
+
+
+                            <div class="course-footer">
+
+                                <span class="price">
+                                    $29
+                                </span>
+
+                                <span class="level">
+                                    Beginner
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer
+        class="site-footer"
+        id="about"
+    >
+
+        <div class="container footer-inner">
+
+            <div>
+
+                <a href="#" class="logo">
+                    Learn<span>Loop</span>
+                </a>
+
+                <p>
+                    Learn something new. Build something better.
+                </p>
+
+            </div>
+
+
+            <p class="copyright">
+                © 2026 LearnLoop. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

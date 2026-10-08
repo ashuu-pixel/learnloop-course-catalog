@@ -1,0 +1,897 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f8fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+select {
+    font: inherit;
+}
+
+
+/* =========================================
+   DESIGN VARIABLES
+========================================= */
+
+:root {
+    --primary: #5b4bdb;
+    --primary-dark: #4536bd;
+
+    --text: #172033;
+    --muted: #687083;
+
+    --background: #f7f8fc;
+    --white: #ffffff;
+
+    --border: #e5e7ef;
+
+    --radius-small: 0.6rem;
+    --radius-medium: 1rem;
+    --radius-large: 1.25rem;
+
+    --shadow:
+        0 0.8rem 2rem rgba(23, 32, 51, 0.07);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: min(92%, 76rem);
+    margin-inline: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    min-height: 4.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1.5rem;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+
+    letter-spacing: -0.04em;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+
+/* Navigation */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.main-nav a {
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+
+/* Header Button */
+
+.header-button {
+    padding: 0.65rem 1rem;
+
+    background: var(--primary);
+    color: white;
+
+    border-radius: var(--radius-small);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.header-button:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    padding-block: clamp(3rem, 8vw, 6rem);
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(91, 75, 219, 0.14),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f2f1ff 100%
+        );
+}
+
+
+.hero-content {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 3rem;
+}
+
+
+/* Small heading */
+
+.eyebrow {
+    margin-bottom: 0.75rem;
+
+    color: var(--primary);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+/* Main heading */
+
+.hero h1 {
+    max-width: 45rem;
+
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+
+    line-height: 1.03;
+
+    letter-spacing: -0.055em;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+
+/* Hero paragraph */
+
+.hero-description {
+    max-width: 38rem;
+
+    margin-top: 1.25rem;
+
+    color: var(--muted);
+
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+}
+
+
+/* Hero statistic */
+
+.hero-stat {
+    min-width: 9rem;
+
+    padding: 1.25rem;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+
+    box-shadow: var(--shadow);
+}
+
+.hero-stat strong {
+    display: block;
+
+    color: var(--primary);
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1;
+}
+
+.hero-stat span {
+    color: var(--muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================
+   COURSE CATALOG
+========================================= */
+
+.catalog-section {
+    padding-block: clamp(3rem, 7vw, 5.5rem);
+}
+
+
+/* Section heading */
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    margin-bottom: 1.75rem;
+}
+
+.section-heading h2 {
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+}
+
+.course-count {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   FILTER BAR
+========================================= */
+
+.filter-bar {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 0.75rem;
+
+    padding: 1rem;
+
+    margin-bottom: 2rem;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-medium);
+
+    box-shadow:
+        0 0.4rem 1.2rem rgba(23, 32, 51, 0.04);
+}
+
+
+.filter-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.35rem;
+}
+
+
+.filter-group label {
+    color: var(--muted);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+
+.filter-group select {
+    width: 100%;
+
+    min-height: 2.7rem;
+
+    padding: 0.55rem 0.7rem;
+
+    background: #fafbfe;
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    border-radius: 0.55rem;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.filter-group select:focus {
+    border-color: var(--primary);
+}
+
+
+/* =========================================
+   COURSE GRID
+========================================= */
+
+/*
+   IMPORTANT REQUIREMENT:
+
+   CSS Grid must use:
+   repeat(auto-fit, minmax(...))
+*/
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                min(100%, 15rem),
+                1fr
+            )
+        );
+
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+
+/* =========================================
+   COURSE CARD
+========================================= */
+
+.course-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-large);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.course-card:hover {
+    transform: translateY(-0.35rem);
+
+    box-shadow:
+        0 1.2rem 2.5rem rgba(23, 32, 51, 0.12);
+}
+
+
+/* =========================================
+   COURSE IMAGE
+========================================= */
+
+/*
+   The image always stays 16:9.
+   This keeps all cards visually aligned.
+*/
+
+.course-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #e9eaf2;
+}
+
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+.course-card:hover .course-image img {
+    transform: scale(1.04);
+}
+
+
+/* Category badge */
+
+.course-category {
+    position: absolute;
+
+    top: 0.75rem;
+    left: 0.75rem;
+
+    padding: 0.3rem 0.55rem;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    color: var(--primary);
+
+    border-radius: 999px;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   COURSE CONTENT
+========================================= */
+
+.course-content {
+    padding: clamp(1rem, 2vw, 1.25rem);
+}
+
+
+/* Rating */
+
+.rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.3rem;
+
+    margin-bottom: 0.6rem;
+
+    font-size: 0.78rem;
+}
+
+
+.rating span {
+    color: #f4a51c;
+}
+
+
+.rating strong {
+    color: var(--text);
+}
+
+
+.rating small {
+    color: var(--muted);
+}
+
+
+/* Course title */
+
+.course-content h3 {
+    min-height: 3.1rem;
+
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+
+    line-height: 1.3;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* Instructor */
+
+.instructor {
+    margin-top: 0.45rem;
+
+    color: var(--muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* Course bottom row */
+
+.course-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0.75rem;
+
+    margin-top: 1.15rem;
+
+    padding-top: 0.9rem;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* Price */
+
+.price {
+    color: var(--text);
+
+    /*
+       REQUIRED:
+       Fluid typography using clamp()
+    */
+
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+
+    font-weight: 800;
+}
+
+
+/* Level badge */
+
+.level {
+    padding: 0.3rem 0.55rem;
+
+    background: #f0efff;
+
+    color: var(--primary);
+
+    border-radius: 999px;
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding-block: 2.5rem;
+
+    background: #172033;
+
+    color: white;
+}
+
+
+.footer-inner {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+}
+
+
+.site-footer .logo {
+    color: white;
+}
+
+
+.site-footer .logo span {
+    color: #a49bf5;
+}
+
+
+.site-footer p {
+    margin-top: 0.4rem;
+
+    color: #aeb5c4;
+
+    font-size: 0.8rem;
+}
+
+
+.copyright {
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLET
+   600px - 1023px
+========================================= */
+
+@media (min-width: 600px) and (max-width: 1023px) {
+
+
+    /* Tablet container */
+
+    .container {
+        width: min(90%, 60rem);
+    }
+
+
+    /*
+       TABLET:
+
+       Two course columns.
+       minmax() keeps the cards flexible.
+    */
+
+    .course-grid {
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(18rem, 1fr)
+            );
+    }
+
+
+    /*
+       Tablet filter bar becomes
+       a horizontal layout.
+    */
+
+    .filter-bar {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+
+    /*
+       Sort control uses the full row
+       on tablet.
+    */
+
+    .sort-control {
+        grid-column: 1 / -1;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 0.75rem;
+    }
+
+
+    .sort-control label {
+        min-width: 4rem;
+    }
+
+
+    .sort-control select {
+        flex: 1;
+    }
+
+
+    /* Smaller navigation gap */
+
+    .main-nav {
+        gap: 1.2rem;
+    }
+
+
+    /* Hero adjustment */
+
+    .hero-content {
+        align-items: center;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   LESS THAN 600px
+========================================= */
+
+@media (max-width: 599px) {
+
+
+    /* Mobile container */
+
+    .container {
+        width: min(92%, 35rem);
+    }
+
+
+    /*
+       Mobile header:
+
+       Hide desktop navigation
+       to keep header clean.
+    */
+
+    .main-nav {
+        display: none;
+    }
+
+
+    .header-inner {
+        min-height: 4rem;
+    }
+
+
+    .header-button {
+        padding: 0.55rem 0.75rem;
+
+        font-size: 0.72rem;
+    }
+
+
+    /*
+       MOBILE HERO:
+
+       Everything becomes vertical.
+    */
+
+    .hero-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .hero-stat {
+        width: 100%;
+    }
+
+
+    /*
+       Mobile section heading
+       becomes vertical.
+    */
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 0.5rem;
+    }
+
+
+    /*
+       MOBILE FILTER:
+
+       Instead of horizontal controls,
+       everything becomes stacked.
+    */
+
+    .filter-bar {
+        grid-template-columns: 1fr;
+
+        gap: 0.85rem;
+    }
+
+
+    .filter-group {
+        width: 100%;
+    }
+
+
+    /*
+       MOBILE GRID:
+
+       Exactly one column.
+    */
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+       Mobile cards use slightly
+       tighter spacing.
+    */
+
+    .course-content {
+        padding: 1rem;
+    }
+
+
+    .course-content h3 {
+        min-height: auto;
+    }
+
+
+    /*
+       Mobile footer becomes vertical.
+    */
+
+    .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .copyright {
+        white-space: normal;
+    }
+
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+   1200px+
+========================================= */
+
+@media (min-width: 1200px) {
+
+
+    .container {
+        width: min(90%, 80rem);
+    }
+
+
+    /*
+       Large desktop:
+
+       More space means the auto-fit grid
+       can naturally display four cards.
+    */
+
+    .course-grid {
+        grid-template-columns:
+            repeat(
+                auto-fit,
+                minmax(15rem, 1fr)
+            );
+    }
+
+}
